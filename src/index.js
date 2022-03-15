@@ -4,7 +4,8 @@ import "./index.css";
 import "./App";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import store from "./store";
+store.suscribe(() => console.log(store.getState()));
 ReactDOM.render(
   <React.StrictMode>
     <App />
