@@ -5,10 +5,13 @@ import "./App";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./store";
-store.suscribe(() => console.log(store.getState()));
+import { Provider } from "react-redux";
+store.subscribe(() => console.log(store.getState()));
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

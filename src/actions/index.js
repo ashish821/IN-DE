@@ -5,6 +5,6 @@ export const incNumber = () => {
 };
 export const decNumber = () => {
   return {
-    typeof: "Decrement",
+    type: "Decrement",
   };
 };
